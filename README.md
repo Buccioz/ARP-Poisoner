@@ -10,6 +10,5 @@ Because ARP Poisoning attacks occur on such a low level, users targeted by ARP P
 Besides Man-in-the-Middle Attacks, ARP Poisoning can be used to cause a denial-of-service condition over a LAN by simply intercepting or dropping and not forwarding the target's packets.
 
 ## Setup
-1 - chmod +x arppoisoner.sh
-
-2 - ./arppoisoner.sh (root required)
+1. chmod +x arppoisoner.sh
+2. ./arppoisoner.sh (root required)
