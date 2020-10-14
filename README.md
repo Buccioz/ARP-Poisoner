@@ -1,5 +1,5 @@
 # ARP-Poisoner
-![alt text](https://i.postimg.cc/N0mQHZbz/Cattura.png)
+![Arp Poisoner Logo](https://imbt.ga/WIU3CExMS1)
 #### Developed by Buccioz
 ## The Attack
 ARP Poisoning (also known as ARP Spoofing) is a type of cyber attack carried out over a Local Area Network (LAN) that involves sending malicious ARP packets to a default gateway on a LAN in order to change the pairings in its IP to MAC address table. 
@@ -10,6 +10,5 @@ Because ARP Poisoning attacks occur on such a low level, users targeted by ARP P
 Besides Man-in-the-Middle Attacks, ARP Poisoning can be used to cause a denial-of-service condition over a LAN by simply intercepting or dropping and not forwarding the target's packets.
 
 ## Setup
-1 - chmod +x arppoisoner.sh
-
-2 - ./arppoisoner.sh (root required)
+1. chmod +x arppoisoner.sh
+2. ./arppoisoner.sh (root required)
