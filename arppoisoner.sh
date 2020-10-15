@@ -60,10 +60,26 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
  sleep 1
  echo
  echo -e "${Green}${bold}Downloading Sniffing Tools...${NC}${normal}";
-
-  chmod +x ./requirements.sh
- sudo xterm ./requirements.sh
-
+printf "${Purple}${bold}"
+PS3='Choose your Operating System: '
+options=("Fedora" "Arch" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Fedora")
+            chmod +x ./requirements.sh
+            sudo xterm ./requirements.sh
+            ;;
+        "Arch")
+            chmod +x requirements_arch.sh
+            sudo xterm ./requirements_arch.sh
+            ;;
+        "Quit")
+            exit
+            ;;
+        *) echo "Invalid option. You're dumb as a rock";;
+    esac
+done     
  echo
 
  echo -e "${Green}${bold}Enabling IP Forwarding...${NC}${normal}"; 
