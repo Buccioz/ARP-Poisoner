@@ -72,7 +72,7 @@ do
             ;;
         "Arch")
             chmod +x requirements_arch.sh
-            sudo yay -S xterm
+            sudo pacman -S xterm
             sudo xterm ./requirements_arch.sh
             ;;
         "Quit")
