@@ -12,3 +12,7 @@ Besides Man-in-the-Middle Attacks, ARP Poisoning can be used to cause a denial-o
 ## Setup
 1. chmod +x arppoisoner.sh
 2. ./arppoisoner.sh (root required)
+
+## Setup on Arch
+1. chmod +x arppoisoner_arch.sh
+2. ./arppoisoner.sh (root required)

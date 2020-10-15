@@ -61,8 +61,9 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
  echo
  echo -e "${Green}${bold}Downloading Sniffing Tools...${NC}${normal}";
 
-  chmod +x ./requirements.sh
-  sudo xterm ./requirements.sh
+    chmod +x requirements_arch.sh
+    sudo pacman -S xterm
+    sudo xterm ./requirements_arch.sh
 
  echo
 
@@ -122,7 +123,7 @@ main() {
 #Menu---------------------------------------------
 printf "${Purple}${bold}"
 PS3=': '
-options=("Poison" "Arp Table" "Hosts Scan" "Quit")
+options=("Poison" "Arp Table" "Hosts Scan" "List Interfaces" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -184,7 +185,7 @@ do
          ./banner.sh
          netstats
          printf "${Purple}${bold}"
-         read -p 'Interface (eth0 - wlan0): ' scanint
+         read -p 'Interface: ' scanint
          echo
          sudo arp-scan --interface=$scanint --localnet
          echo
@@ -192,6 +193,11 @@ do
          echo
          backmenu
            ;;
+
+        "List Interfaces")
+        ifconfig
+        backmenu
+        ;;
 
         "Quit")
             clear
