@@ -49,7 +49,7 @@ root() {
 #requirements-------------------------------------------------------------------
 requirements() {
 echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
-sudo apt-get install xterm+
+sudo apt-get install xterm
  
   spinner&
         
