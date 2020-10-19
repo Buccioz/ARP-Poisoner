@@ -63,8 +63,8 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
 
   chmod +x ./requirements.sh
   sudo apt install xterm
-  sudo xterm ./requirements.sh
-
+  sudo ./requirements.sh
+  clear
  echo
 
  echo -e "${Green}${bold}Enabling IP Forwarding...${NC}${normal}"; 
