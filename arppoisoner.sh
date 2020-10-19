@@ -62,6 +62,7 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
  echo -e "${Green}${bold}Downloading Sniffing Tools...${NC}${normal}";
 
   chmod +x ./requirements.sh
+  sudo apt install xterm
   sudo xterm ./requirements.sh
 
  echo
