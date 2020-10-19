@@ -139,7 +139,7 @@ do
 
          netstats
          printf "${Purple}${bold}"
-         read -p 'Interface (eth0 - lo - wlan0): ' inter
+         read -p 'Interface: ' inter
          echo
          read -p 'Victim IP: ' vict
          echo
@@ -185,7 +185,7 @@ do
          ./banner.sh
          netstats
          printf "${Purple}${bold}"
-         read -p 'Interface (eth0 - wlan0): ' scanint
+         read -p 'Interface: ' scanint
          echo
          sudo arp-scan --interface=$scanint --localnet
          echo
