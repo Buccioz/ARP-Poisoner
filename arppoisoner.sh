@@ -49,6 +49,7 @@ root() {
 #requirements-------------------------------------------------------------------
 requirements() {
 echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
+sudo apt-get install xterm+
  
   spinner&
         
@@ -60,7 +61,7 @@ echo -e "${Green}${bold}Checking the requirements...${NC}${normal}";
  sleep 1
  echo
  echo -e "${Green}${bold}Downloading Sniffing Tools...${NC}${normal}";
-
+  
   chmod +x ./requirements.sh
  sudo xterm ./requirements.sh
 
