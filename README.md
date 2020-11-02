@@ -1,5 +1,5 @@
 # ARP-Poisoner
-![Arp Poisoner Logo](https://www.teabagatexitstore.com/Github_banners/Arppoisoner.PNG)
+![Arp Poisoner Banner](https://www.teabagatexitstore.com/Github_banners/Arppoisoner.PNG)
 #### Developed by Buccioz
 ## The Attack
 ARP Poisoning (also known as ARP Spoofing) is a type of cyber attack carried out over a Local Area Network (LAN) that involves sending malicious ARP packets to a default gateway on a LAN in order to change the pairings in its IP to MAC address table. 
